@@ -35,7 +35,8 @@ function Response() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/message")
+
+    fetch("https://hello-world-k8s-api-179355965248.us-central1.run.app/message")
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
